@@ -12,16 +12,16 @@ const imageUrl = `${baseUrl}/thumbnail.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Urbe Hacks",
-    template: "%s | Urbe Hacks",
+    default: "Bloom",
+    template: "%s | Bloom",
   },
-  description: "Built with 🏗 Urbe Hacks",
+  description: "Bloom",
   openGraph: {
     title: {
-      default: "Urbe Hacks",
-      template: "%s | Urbe Hacks",
+      default: "Bloom",
+      template: "%s | Bloom",
     },
-    description: "Built with 🏗 Urbe Hacks",
+    description: "Bloom",
     images: [
       {
         url: imageUrl,
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [imageUrl],
     title: {
-      default: "Urbe Hacks",
-      template: "%s | Urbe Hacks",
+      default: "Bloom",
+      template: "%s | Bloom",
     },
-    description: "Built with 🏗 Urbe Hacks",
+    description: "Bloom",
   },
   icons: {
     icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
@@ -45,8 +45,10 @@ export const metadata: Metadata = {
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
     <html suppressHydrationWarning>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" />
-
+      <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Open+Sans:wght@300..800&display=swap"
+        rel="stylesheet"
+      />
       <body>
         <ThemeProvider enableSystem>
           <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>

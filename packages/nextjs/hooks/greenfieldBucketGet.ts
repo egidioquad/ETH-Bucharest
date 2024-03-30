@@ -9,7 +9,7 @@ export async function greenfieldBucketGet() {
   const sps = await client.sp.getStorageProviders();
 
   const res = await client.object.listObjects({
-    bucketName: "mybucket22245",
+    bucketName: "bloom553",
     endpoint: sps[0].endpoint, //! DA TESTARE
   });
 
@@ -41,7 +41,7 @@ async function fetchObjectsByName(names: string[]): Promise<CampaignInfo[]> {
   const filesArray: CampaignInfo[] = [];
 
   for (const name of names) {
-    const response = await fetch(`https://gnfd-testnet-sp1.nodereal.io/view/mybucket22245/${name}`);
+    const response = await fetch(`https://gnfd-testnet-sp1.nodereal.io/view/bloom553/${name}`);
     if (response.ok) {
       const json: CampaignInfo = await response.json();
       filesArray.push(json);

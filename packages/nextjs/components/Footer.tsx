@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none">
           <div className="flex flex-col md:flex-row gap-2 pointer-events-auto">
             <div>
-              <Button size="medium" primary color="#4ade80" label="💸" />
+              <Button size="medium" secondary color="#4ade80" label="💸" />
             </div>
           </div>
         </div>

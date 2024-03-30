@@ -31,7 +31,7 @@ export async function greenfieldDeploy(
     title: title,
     desc: desc,
     image: imageBuffer,
-    impact: impact,
+    impact: impact || "",
     amount: amount,
     creator: connectedAddress,
   };
@@ -65,7 +65,7 @@ export async function greenfieldDeploy(
 
   /* const createBucketTx = await client.bucket.createBucket(
     {
-      bucketName: "mybucket22245",
+      bucketName: "bloom553",
       creator: connectedAddress,
       visibility: "VISIBILITY_TYPE_PUBLIC_READ",
       chargedReadQuota: "0",
@@ -99,7 +99,7 @@ export async function greenfieldDeploy(
   //		? THIS IS FOR GETTING THE APPROVAL OF THE OBJECT
   const createObjectTx = await client.object.createObject(
     {
-      bucketName: "mybucket22245", //this is our bucket name
+      bucketName: "bloom553", //this is our bucket name
       objectName: title,
       creator: connectedAddress,
       visibility: "VISIBILITY_TYPE_PUBLIC_READ",
@@ -137,7 +137,7 @@ export async function greenfieldDeploy(
   // upload your object
   await client.object.uploadObject(
     {
-      bucketName: "mybucket22245",
+      bucketName: "bloom553",
       objectName: title,
       body: file, // !DA TESTARE
 
@@ -153,10 +153,10 @@ export async function greenfieldDeploy(
     },
   );
 
-  const bucketInfo = await client.bucket.headBucket("mybucket22245");
+  const bucketInfo = await client.bucket.headBucket("bloom553");
 
   const res = await client.object.listObjects({
-    bucketName: "mybucket22245",
+    bucketName: "bloom553",
     endpoint: sProviders[0].endpoint, //! DA TESTARE
   });
 }

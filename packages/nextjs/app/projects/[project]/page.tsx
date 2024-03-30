@@ -24,7 +24,7 @@ const ClubPage: NextPage = () => {
     if (!name) return;
 
     const fetchObject = async () => {
-      const response = await fetch(`https://gnfd-testnet-sp1.nodereal.io/view/mybucket22245/${name}`);
+      const response = await fetch(`https://gnfd-testnet-sp1.nodereal.io/view/bloom553/${name}`);
       if (response.ok) {
         const json: CampaignInfo = await response.json();
         setCampaignDetails(json);
@@ -81,14 +81,11 @@ const ClubPage: NextPage = () => {
             </Box>
 
             <Box>
-              <Box width="full" alignSelf="center" pad={{ vertical: "medium", horizontal: "large" }}>
+              <Box width="full" alignSelf="center" pad={{ horizontal: "large" }}>
                 <Box direction="row" justify="between">
                   <Box width={{ max: "50%" }} justify="center" align="center" gap="medium" pad="medium">
                     <h1>About The Project:</h1>
-                    <h1>
-                      {campaignDetails.desc} bgssssssssssss sssssssssssssss ssoidghsoighs ioghsoighsoi ghsioghsoi
-                      ghsoighso ighosiiiiii iiiiiiiiiiiiiiiiiii sgihsgoish ogshhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhh
-                    </h1>
+                    <h1>{campaignDetails.desc}</h1>
                   </Box>
                   <Box justify="center" pad="large">
                     <Stack anchor="center">

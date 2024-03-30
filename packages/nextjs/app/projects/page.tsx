@@ -1,16 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ListObjectsByIDsResponse, SpResponse } from "@bnb-chain/greenfield-js-sdk";
 import { Box, Grid, Image, Meter, Spinner } from "grommet";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
-import { Address } from "~~/components/scaffold-eth";
 import { greenfieldBucketGet } from "~~/hooks/greenfieldBucketGet";
 import { CampaignInfo } from "~~/hooks/greenfieldDeploy";
-import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
-import { GetFileFromIpfs } from "~~/utilComponents/IPFSdeploy";
 
 const Projects: NextPage = () => {
   const [loading, setLoading] = useState(false);
@@ -43,13 +38,12 @@ const Projects: NextPage = () => {
         <Grid rows="small " columns={["1/2", "1/2"]} gap="small">
           {allObjects.map((object, index) => (
             <Link href={`/projects/${object.title}`}>
-              <Box key={index} border={{ color: "brand", size: "small" }} pad="medium" direction="row" round="small">
+              <Box key={index} border={{ color: "#4ade80", size: "small" }} pad="medium" direction="row" round="small">
                 <Box width="160px" height="160px">
                   <Image src={`${object.image}`} fit="contain" />
                 </Box>
                 <Box align="center" justify="center" width="full" gap="sxmall">
                   <p className="text-lg">{object.title}</p>
-                  <p>{object.desc}</p>
                 </Box>
               </Box>
             </Link>
@@ -58,7 +52,7 @@ const Projects: NextPage = () => {
       )}
       {loading == true && (
         <Box align="center" justify="center">
-          <Spinner size="large" />
+          <Spinner size="medium" />
         </Box>
       )}
     </Box>

@@ -34,7 +34,7 @@ export const menuLinks: HeaderMenuLink[] = [
     icon: <StarIcon className="h-4 w-4" />,
   },
   {
-    label: "All Campaigns",
+    label: "Explore",
     href: "/projects",
     icon: <StarIcon className="h-4 w-4" />,
   },

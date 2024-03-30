@@ -70,7 +70,7 @@ const Create: NextPage = () => {
       return;
     }
 
-    const allowedImageTypes = ["image/jpeg", "image/png", "image/gif"]; // Add more types as needed
+    const allowedImageTypes = ["image/jpeg", "image/png"]; // Add more types as needed
 
     const fileType = file.type;
 
@@ -82,7 +82,7 @@ const Create: NextPage = () => {
   };
 
   return (
-    <Box className="bg-green-400 size-full h-100vh " fill pad="large" align="center">
+    <Box className="bg-green-400 size-full h-screen " fill pad="large" align="center">
       {!isLoading && (
         <Box
           margin="large"
@@ -92,7 +92,7 @@ const Create: NextPage = () => {
           round="medium"
         >
           <Box align="center" justify="center" pad={{ vertical: "medium" }} gap="small">
-            <h1 className="text-xl">KICK-OFF YOUR PROJECT</h1>
+            <h1 className="text-xl font-bold">KICK-OFF YOUR PROJECT</h1>
           </Box>
           <Box gap="medium" margin={{ horizontal: "medium", vertical: "small" }} align="start">
             <Box align="start">
@@ -113,7 +113,7 @@ const Create: NextPage = () => {
             </Box>
 
             <Box align="start" gap="small">
-              <h1>Image Upload</h1>
+              <h1>Projet Image</h1>
               <input
                 type="file"
                 className="file-input file-input-bordered file-input-ghost  w-full max-w-xs"
@@ -138,7 +138,7 @@ const Create: NextPage = () => {
       )}
       {isLoading && (
         <Box align="center" justify="center">
-          <Spinner size="large" />
+          <Spinner size="medium" />
         </Box>
       )}
     </Box>
