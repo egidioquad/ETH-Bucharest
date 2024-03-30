@@ -3,7 +3,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import LandingPage from "../utilComponents/landingPage";
+
 import { Box, Button, Grid, Image, Meter } from "grommet";
 import { Grommet } from "grommet";
 import type { NextPage } from "next";
